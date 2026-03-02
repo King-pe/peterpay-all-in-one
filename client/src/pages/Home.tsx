@@ -12,8 +12,10 @@ import {
   Heart
 } from "lucide-react";
 import { DonateButton } from "@/components/DonateButton";
+import { useLocation } from "wouter";
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       {/* Header/Navigation */}
@@ -32,7 +34,10 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-3">
             <DonateButton showLabel={false} className="hidden sm:flex" />
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 shadow-sm">
+            <Button 
+              onClick={() => setLocation("/dashboard")}
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 shadow-sm"
+            >
               Get Started
             </Button>
           </div>
@@ -59,10 +64,17 @@ export default function Home() {
                   Streamline your financial transactions with our comprehensive all-in-one platform. Secure, fast, and built for the modern economy.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white h-12 px-8 text-md rounded-lg shadow-lg hover:shadow-xl transition-all">
+                  <Button 
+                    onClick={() => setLocation("/dashboard")}
+                    className="bg-blue-600 hover:bg-blue-700 text-white h-12 px-8 text-md rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  >
                     Start Now <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
-                  <Button variant="outline" className="h-12 px-8 text-md border-slate-200 text-slate-700 hover:bg-slate-50 rounded-lg">
+                  <Button 
+                    onClick={() => setLocation("/dashboard")}
+                    variant="outline" 
+                    className="h-12 px-8 text-md border-slate-200 text-slate-700 hover:bg-slate-50 rounded-lg"
+                  >
                     View Demo
                   </Button>
                 </div>
@@ -194,7 +206,10 @@ export default function Home() {
               Join hundreds of businesses in Tanzania using PeterPay to streamline their operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-blue-600 hover:bg-slate-100 h-12 px-8 font-bold text-md rounded-lg">
+              <Button 
+                onClick={() => setLocation("/dashboard")}
+                className="bg-white text-blue-600 hover:bg-slate-100 h-12 px-8 font-bold text-md rounded-lg"
+              >
                 Get Started Today
               </Button>
               <DonateButton className="h-12 px-8 font-bold text-md rounded-lg" />

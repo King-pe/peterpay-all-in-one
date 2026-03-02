@@ -29,28 +29,8 @@ export function DonateButton({ className = "", showLabel = true }: DonateButtonP
   const [isHovered, setIsHovered] = useState(false);
 
   const handleDonateClick = () => {
-    // Open donation modal or redirect to payment page
-    const message = `
-Support PeterPay All-in-One Development
-
-To use this code commercially or to support continued development, please donate TSh 15,000 via M-Pesa.
-
-Payment Details:
-- Amount: TSh 15,000
-- Method: M-Pesa
-- Recipient: [INSERT M-PESA NUMBER]
-
-After donation, you will receive:
-- Commercial usage rights
-- Access to priority support
-- License certificate
-- Usage tracking exemption
-
-For more information, contact: [INSERT CONTACT EMAIL]
-    `;
-    
-    // In a real implementation, this would open a payment modal or redirect to a payment gateway
-    alert(message);
+    // Redirect to the donation link
+    window.location.href = "https://www.peterpay.link/pay?code=bf591266&i=1";
   };
 
   return (
