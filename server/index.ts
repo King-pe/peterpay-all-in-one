@@ -26,6 +26,32 @@ async function startServer() {
       : path.resolve(__dirname, "..", "dist", "public");
 
   app.use(express.static(staticPath));
+  app.use(express.json());
+
+  // API Routes
+  app.get("/api/health", (_req, res) => {
+    res.json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
+  // Example API route to get users
+  app.get("/api/users", async (_req, res) => {
+    try {
+      const result = await pool.query('SELECT * FROM users');
+      res.json(result.rows);
+    } catch (err) {
+      res.status(500).json({ error: "Failed to fetch users" });
+    }
+  });
+
+  // Example API route to get transactions
+  app.get("/api/transactions", async (_req, res) => {
+    try {
+      const result = await pool.query('SELECT * FROM transactions');
+      res.json(result.rows);
+    } catch (err) {
+      res.status(500).json({ error: "Failed to fetch transactions" });
+    }
+  });
 
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
