@@ -82,10 +82,16 @@ This codebase includes mechanisms to protect its integrity and track unauthorize
 We appreciate everyone who has supported this project by starring or forking the repository!
 
 ### Stargazers
-[![Stargazers repo roster for King-pe/peterpay-all-in-one](https://reporoster.com/stars/King-pe/peterpay-all-in-one)](https://github.com/King-pe/peterpay-all-in-one/stargazers)
+
+<a href="https://github.com/King-pe/peterpay-all-in-one/stargazers">
+  <img src="https://contrib.rocks/image?repo=King-pe/peterpay-all-in-one" />
+</a>
 
 ### Forkers
-[![Forkers repo roster for King-pe/peterpay-all-in-one](https://reporoster.com/forks/King-pe/peterpay-all-in-one)](https://github.com/King-pe/peterpay-all-in-one/network/members)
+
+<a href="https://github.com/King-pe/peterpay-all-in-one/network/members">
+  <img src="https://contrib.rocks/image?repo=King-pe/peterpay-all-in-one&max=1000" />
+</a>
 
 ## Contact
 
