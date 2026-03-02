@@ -2,17 +2,16 @@
 
 ## Overview
 
-This repository contains the source code for PeterPay All-in-One, a comprehensive application designed to [**Add a brief description of what PeterPay All-in-One does here. For example: streamline payment processes, manage financial transactions, or provide a unified platform for various financial services.**]. It includes both client-side and server-side components, built with modern web technologies to ensure a robust and scalable solution.
+This repository contains the source code for PeterPay All-in-One, a comprehensive application designed to streamline payment processes, manage financial transactions, and provide a unified platform for various financial services. It includes both client-side and server-side components, built with modern web technologies to ensure a robust and scalable solution.
 
 ## Features
-
-[**List key features of your application here. Examples:**]
 
 *   **Secure Payment Processing:** Handles various payment methods securely.
 *   **User Management:** Robust system for user registration, login, and profile management.
 *   **Transaction History:** Detailed records of all financial transactions.
 *   **Scalable Architecture:** Designed to handle a growing number of users and transactions.
 *   **Modern User Interface:** Intuitive and responsive design for an optimal user experience.
+*   **PostgreSQL Integration:** Powered by PostgreSQL for reliable data storage.
 
 ## Getting Started
 
@@ -20,11 +19,10 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-[**List any software or dependencies required to run the project. Examples:**]
-
 *   Node.js (v18 or higher)
-*   pnpm (for package management)
+*   pnpm or npm (for package management)
 *   Git
+*   PostgreSQL Database
 
 ### Installation
 
@@ -35,18 +33,20 @@ To get a local copy up and running, follow these simple steps.
     ```
 2.  Install dependencies:
     ```bash
-    pnpm install
+    npm install --legacy-peer-deps
     ```
 3.  Set up environment variables:
-    Create a `.env` file in the root directory and add necessary environment variables (e.g., database connection strings, API keys).
+    Create a `.env` file in the root directory and add your PostgreSQL connection string.
     ```
-    # Example .env content
-    DATABASE_URL="your_database_url"
-    API_KEY="your_api_key"
+    DATABASE_URL="postgresql://username:password@localhost:5432/peterpay"
     ```
-4.  Run the application:
+4.  Run database migrations:
     ```bash
-    pnpm dev
+    npx drizzle-kit push
+    ```
+5.  Run the application:
+    ```bash
+    npm run dev
     ```
 
 ## Contribution and Usage Policy
@@ -59,7 +59,11 @@ If you intend to use this code for commercial purposes, or if you find this proj
 
 **How to Donate:**
 
-To make a donation, please send **TSh 15,000** via M-Pesa or other specified payment methods. [**Insert M-Pesa number or other payment details here. For example: M-Pesa Number: +255 7XX XXX XXX (King-pe)**]. Upon successful donation, you will be granted permission for commercial use and access to any necessary support.
+To make a donation, please click the button below:
+
+[![Donate](https://img.shields.io/badge/Donate-TSh%2015%2C000-blue?style=for-the-badge&logo=paypal)](https://www.peterpay.link/pay?code=bf591266)
+
+Upon successful donation, you will be granted permission for commercial use and access to any necessary support.
 
 ### Copyright and Licensing
 
@@ -73,6 +77,16 @@ Any use of this code, whether commercial or non-commercial, must adhere to the t
 
 This codebase includes mechanisms to protect its integrity and track unauthorized usage. Any attempt to bypass these protections or use the code without proper authorization will be detected. Users found to be in violation of these terms will be notified, and appropriate measures will be taken.
 
+## Our Supporters
+
+We appreciate everyone who has supported this project by starring or forking the repository!
+
+### Stargazers
+[![Stargazers repo roster for King-pe/peterpay-all-in-one](https://reporoster.com/stars/King-pe/peterpay-all-in-one)](https://github.com/King-pe/peterpay-all-in-one/stargazers)
+
+### Forkers
+[![Forkers repo roster for King-pe/peterpay-all-in-one](https://reporoster.com/forks/King-pe/peterpay-all-in-one)](https://github.com/King-pe/peterpay-all-in-one/network/members)
+
 ## Contact
 
-For any inquiries, permissions, or support, please contact King-pe at [**Insert your contact email or preferred communication method here. For example: king.pe.dev@example.com**].
+For any inquiries, permissions, or support, please contact King-pe at **peterjoram897@gmail.com**.

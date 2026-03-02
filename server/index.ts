@@ -2,11 +2,20 @@ import express from "express";
 import { createServer } from "http";
 import path from "path";
 import { fileURLToPath } from "url";
+import { pool } from "./db";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function startServer() {
+  // Check database connection
+  try {
+    await pool.query('SELECT 1');
+    console.log('PostgreSQL connected successfully');
+  } catch (err) {
+    console.error('PostgreSQL connection error:', err);
+  }
+
   const app = express();
   const server = createServer(app);
 
